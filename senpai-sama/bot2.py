@@ -16,7 +16,7 @@ bot.remove_command('help')
 
 
 r = requests.get('https://thoughtcatalog.com/lorenzo-jensen-iii/2016/11/sick-burns-the-100-greatest-insults-of-all-time/')
-soup = BeautifulSoup(r.text,'lxml')
+soup = BeautifulSoup(r.text)
 a = soup.find('div',{'class':'entry post clearfix'}).find_all('p')
 
 
