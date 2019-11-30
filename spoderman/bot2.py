@@ -87,7 +87,7 @@ def command_working():
     async def insult(ctx):
         c = random.randint(0,100)
         await ctx.send(a[c].text)
-    bot.run('NjI4MjQxNTcwNzkzMTI3OTU3.XaCV_A.3F7LmzHaoZ8ZITPFZCEm6Kw9gyg')
+    bot.run('--sceret-key-here--')
 
 message_lister()
 command_working()
