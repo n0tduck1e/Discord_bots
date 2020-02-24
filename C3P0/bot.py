@@ -29,7 +29,7 @@ def event_working():
     async def on_member_join(member : discord.Member):
         for i in member.guild.channels:
             if str(i) == "welcome":
-                await i.send('Welcome to **The Rebellion**, {}.\n Type !help to use the bot .\nIntroduce yourself in #general.'.format(member.mention))
+                await i.send('Welcome to **PwnBpit**, {}.\n Type !help to use the bot.'.format(member.mention))
     
     @client.event
     async def on_command_error(ctx, error):
@@ -37,41 +37,7 @@ def event_working():
             await ctx.send("No Luke, You Must First Become A Jedi")
         else:
             text = '''
-```
-
-                    ____
-                 _.' :  `._
-             .-.'`.  ;   .'`.-.
-    __      / : ___\\ ;  /___ ; \\      __
-  ,'_ ""--.:__;".-.";: :".-.":__;.--"" _`,
-  :' `.t""--.. '<@.`;_  ',@>` ..--""j.' `;
-       `:-.._J '-.-'L__ `-- ' L_..-;'
-         "-.__ ;  .-"  "-.  : __.-"
-             L ' /.------.\\ ' J
-              "-.   "--"   .-"
-             __.l"-:_JL_;-";.__
-          .-j/'.;  ;""""  / .'\"-.
-        .' /:`. "-.:     .-" .';  `.
-     .-"  / ;  "-. "-..-" .-"  :    "-.
-  .+"-.  : :      "-.__.-"      ;-._   \
-  ; \\  `.; ;                    : : "+. ;
-  :  ;   ; ;                    : ;  : \\:
- : `."-; ;  ;                  :  ;   ,/;
-  ;    -: ;  :                ;  : .-"'  :
-  :\\     \\  : ;             : \\.-"      :
-   ;`.    \\  ; :            ;.'_..--  / ;
-   :  "-.  "-:  ;          :/."      .'  :
-     \\       .-`.\\        /t-""  ":-+.   :
-      `.  .-"    `l    __/ /`. :  ; ; \\  ;
-        \\   .-" .-"-.-"  .' .'j \\  /   ;/
-         \\ / .-"   /.     .'.' ;_:'    ;
-          :-""-.`./-.'     /    `.___.'
-                \\ `t  ._  /
-                 "-.t-._:'
-
-        
-Read the !help, you should
-```
+Invalid Command. Read !help for more info
 '''
             await ctx.send(text)
 
@@ -111,11 +77,9 @@ Type the following commands to get stuff done:
 1.) !help 
 To display this message
 
-2.) !resources ML/Hacking/WebDev
-To get resources on mentioned fields
+2.) !rules
+To get rules of the ctf
 
-3.) !ping
-bot replies pong
 
 ===========Mod Specific Commands================
 1.) !ban @username reason
@@ -134,48 +98,29 @@ To unban someone
     
 
     @client.command()
-    async def resources(ctx, target):
-        ML = '''
-``` 
-Get basics covered such as:
-1.) Learn python libraries such as :
-    + numpy : https://numpy.org/
-    + pandas : https://pandas.pydata.org/
-    + matplotlib : https://matplotlib.org/
-Here are some of the resource and blogs on different algorithms. Dividing the algorithm into mainly two parts 
-    1. supervised learning  
-    2. unsupervised  learning 
-    + K-Nearesr Neighbours - https://kevinzakka.github.io/2016/07/13/k-nearest-neighbor/
-    + Decision Trees - https://homepage.cs.uri.edu/faculty/hamel/courses/2015/spring2015/csc481/lecture-notes/ln481-018.pdf
-    + K means clustering - https://www.analyticsvidhya.com/blog/2019/08/comprehensive-guide-k-means-clustering/
-    + PCA -https://towardsdatascience.com/a-one-stop-shop-for-principal-component-analysis-5582fb7e0a9c
-    + Linear and Logistic Regression -https://towardsdatascience.com/whats-linear-about-logistic-regression-7c879eb806ad
-
+    async def rules(ctx, target):
+       rules = '''
 ```
-'''
-        Hacking = '''
-```
-For getting started in this field, one must have good knowlegde of the following:
-1) Networking
-    + Read CCNA Routing and Switching Complete Study Guide
-    + Get Practical Practice of Networking Protocols
-        -> Setup IMAP,POP3,mysql etc servers and play with to get a feel of it
-2) Linux FileSystem
-    + Download and setup any linux distro in vm and start exploring stuff i.e its filesystem, permissions and default stuff that is present in it.        
-    + Practice setting up Networking protocols in this environment.
+By playing on this server you agree to these rules:
+	1. No swearing, dating, or other inappriopriate behaviour.
+	2. No spamming, using all-caps, or any other method of chat abuse.
+	3. Don't be a cheater. No hacked clients.
+	4. Don't excessively spawnkill. Some spawn killing to stop players chasing
+	        the flag bearer is OK, but hogging the flag and repeatedly killing
+	        the same players definitely isn't.
+	5. Don't be a traitor. Don't:
+	    a. Dig blocks in your base to make it less secure or
+	       to trap team mates on purpose.
+	    b. Help the other team win.
+	    c. Change teams.
+	6. Don't leave the game whilst in a fight
+	7. Don't impersonate other community members.
+	8. Do not share your password with ANYONE.
+	9. Moderator decisions are final.
 ```
 '''
 
-        WebDev = '''Get Cucked
-        '''
-
-
-        if target == "ML":
-            await ctx.send(ML)
-        elif target == "Hacking":
-            await ctx.send(Hacking)
-        elif target == "WebDev":
-            await ctx.send(WebDev)
+        await ctx.send(rules)
     
 
     @client.command()
