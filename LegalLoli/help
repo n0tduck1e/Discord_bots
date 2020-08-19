@@ -1,24 +1,26 @@
-Konichiwa UwU !
-
-I am LegalLoli, talking to me definitely wont get your name on FBI watch list UwU
+```
+Konichiwa ! OwO
+I am LegalLoli, talking to me definitely wont get your name on FBI watch list UwU.
 Use the following commands:
-!help => see this message again
-!insult => get a random insult, you pathetic weeb
-!top_anime => All time top anime 10 list
-!top_anime <rank> => Get all time top anime rank specific.
-	ex !top_anime 12
-!seasonal => Latest Seasonal anime.
-!seasonal <rank> => Seasonal anime rank specific.
-	ex !seasonal 12
-
-!waifu => coming soon, pervert.
-
--------Mod Specific Commands----------
-!ban <member tag> <reason>
-	ex !ban @duckie too leet
-!unban <member tag>
-	ex !unban @duckie
-!kick <member> <reason>
-	ex !kick @vatsal too weeb
-
-Thats it,
+senpai help => see this message again
+senapi insult => get a random insult, you pathetic weeb
+senpai top_anime <rank> => Get all time top anime rank specific. (Defaults to top 10)
+	ex senpai top_anime 12
+senpai seasonal <rank> => Seasonal anime rank specific. (Defaults to top 10)
+	ex senpai seasonal 12
+senpai animegif => Random anime gif
+senpai waifu => coming soon, pervert.
+senpai clear <number> => Delete Messages (Default 20)
+	ex senpai clear 6
+senpai nhentai <number> => get cover page of given "manga" UwU (NSFW)
+	ex senpai nhentai 323257
+------- Mod Specific Commands -------
+senpai ban <member tag> <reason>
+		ex senpai ban @duckie too leet
+senpai unban <member tag>
+		ex senpai unban @duckie
+senpai kick <member> <reason>
+		ex senpai kick @vatsal too weeb
+Thats it. Bie Bye UwU !
+```
+'''
