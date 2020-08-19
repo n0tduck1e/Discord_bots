@@ -1,0 +1,4 @@
+git+https://github.com/abhinavk99/jikanpy.git@master
+git+https://github.com/Rapptz/discord.py@master
+git+https://github.com/psf/requests.git@master
+git+https://github.com/waylan/beautifulsoup.git
